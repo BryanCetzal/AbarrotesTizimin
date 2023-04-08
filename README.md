@@ -22,10 +22,7 @@ ejemplo: javafx, swing):
 **Esta es la idea principal, pero nosotros como equipo debemos implementar mas cosas para que sea diferente de los demás.**
 
 # Integrantes:  
-- @BryanCetzal 
-- @Benn7n  
--  
--
-
-Hola, vayase a la mierda por favor.
-Que buen servicio
+- [Bryan Emmanuel Cetzal Ceme](https://github.com/BryanCetzal)
+- [Bennen Alexandre Tun Ek](https://github.com/Benn7n)
+- [Bernardo ]()
+- [Yajani Anahì Peraza Alcocer]()
