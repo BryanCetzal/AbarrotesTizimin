@@ -20,3 +20,7 @@ ejemplo: javafx, swing):
 4. Salir 
 
 **Esta es la idea principal, pero nosotros como equipo debemos implementar mas cosas para que sea diferente de los demás.**
+
+#Integrantes:  
+@BryanCetzal  
+@BennenTun
