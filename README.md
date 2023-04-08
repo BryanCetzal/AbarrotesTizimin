@@ -1,5 +1,6 @@
 # Abarrotes Tizimin
-Proyecto final de la asignatura de Diseño de software 
+_Proyecto final de la asignatura de Diseño de software_   
+
 El gerente de la tienda “Abarrotes Tizimín” desea tener un software que le ayude con sus ventas. 
 Para lo anterior se registra los siguientes requerimientos funcionales: Los datos para registrar el 
 cliente son: Identificador del Cliente, Nombre, Apellido Paterno, Dirección ((Composición: Calle, 
@@ -16,4 +17,6 @@ ejemplo: javafx, swing):
 1. Registrar un cliente 
 2. Registrar artículo 
 3. Realizar compra 
-4. Salir
+4. Salir 
+
+**Esta es la idea principal, pero nosotros como equipo debemos implementar mas cosas para que sea diferente de los demás.**
