@@ -19,7 +19,7 @@ ejemplo: javafx, swing):
 3. Realizar compra 
 4. Salir 
   
-[Requerimientos Funcionales](Requerimientos.md)  
+# [Requerimientos Funcionales](Requerimientos.md)  
 # Integrantes:  
 - [Bryan Emmanuel Cetzal Ceme](https://github.com/BryanCetzal)
 - [Bennen Alexandre Tun Ek](https://github.com/Benn7n)
