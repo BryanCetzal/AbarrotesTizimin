@@ -19,9 +19,17 @@ ejemplo: javafx, swing):
 3. Realizar compra 
 4. Salir 
   
-# [Requerimientos Funcionales](Requerimientos.md)  
-# Integrantes:  
+## [Requerimientos Funcionales](Requerimientos.md)  
+## Diagramas  
+- Diagrama de casos de uso
+![]()
+- Diagrama de clases
+![]()
+- Diagrama de secuencia
+![]()
+
+## Integrantes:  
 - [Bryan Emmanuel Cetzal Ceme](https://github.com/BryanCetzal)
 - [Bennen Alexandre Tun Ek](https://github.com/Benn7n)
-- [Bernardo Reyes Chimal Pool]()
-- [Yajani Anahì Peraza Alcocer]()
+- [Bernardo Reyes Chimal Pool](https://github.com/)
+- [Yajani Anahì Peraza Alcocer](https://github.com/)
