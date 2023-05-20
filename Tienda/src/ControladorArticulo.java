@@ -10,8 +10,8 @@ public class ControladorArticulo {
         vista = new VistaArticulo();
     }
 
-    public void agregarArticulo(Articulo){
-        Articulo articulo = new Articulo();
+    public void agregarArticulo(){
+        Articulo articulo = new vista.obtenerDatosArticulo();
         carrito.add(articulo);
         System.out.println("Artículo agregado al carrito: " + articulo.getNombreArticulo());
     }
@@ -28,13 +28,13 @@ public class ControladorArticulo {
                     vista.mostrarArticulos(carrito);
                     break;
                 case 2:
-                    agregarArticulo(vista.obtenerDatosArticulo());
+                    agregarArticulo();
                     break;
                 case 3:
                     actualizarArticulo();
                     break;
                 case 4:
-                    vista.mostrarMensaje("¡Hasta luego!");
+                    vista.mostrarMensaje("¡Saliendo del menu de artículo!");
                     break;
                 default:
                     vista.mostrarMensaje("Opción inválida");
@@ -44,7 +44,7 @@ public class ControladorArticulo {
     }
 
     private void actualizarArticulo() {
-        // Implementa la lógica para actualizar un artículo existente
+
     }
 
 }

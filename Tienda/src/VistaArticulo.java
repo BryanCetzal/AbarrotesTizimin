@@ -32,13 +32,17 @@ public class VistaArticulo {
 
     public Articulo obtenerDatosArticulo() {
         scanner.nextLine(); // Limpiar el buffer
-        System.out.print("Ingresa el nombre del artículo: ");
+        System.out.print("Ingresa el identificador del artículo: ");
+        int id = scanner.nextInt();
+        System.out.println("Ingresa el nombre del artículo: ");
         String nombre = scanner.nextLine();
         System.out.print("Ingresa el precio del artículo: ");
         double precio = scanner.nextDouble();
+        System.out.println("Ingresa el precio del artículo (proveedor): ");
+        double precioProveedor = scanner.nextDouble();
         System.out.print("Ingresa la cantidad en stock: ");
         int stock = scanner.nextInt();
-        return new Articulo(nombre, precio, stock);
+        return new Articulo(id, nombre, precio, precioProveedor, stock);
     }
 
     public void mostrarMensaje(String mensaje) {
