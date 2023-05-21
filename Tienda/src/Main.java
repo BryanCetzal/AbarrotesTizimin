@@ -6,6 +6,9 @@ public class Main {
 
         ControladorArticulo controladorArticulo = new ControladorArticulo();
         controladorArticulo.iniciar();
+
+        ControladorCarrito controladorCarrito = new ControladorCarrito();
+        controladorCarrito.inicioCarrito(controladorArticulo.inventario());
     }
 }
 

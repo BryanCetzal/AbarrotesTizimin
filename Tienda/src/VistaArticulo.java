@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class VistaArticulo {
     private Scanner scanner;
-    private ControladorArticulo controladorArticulo;
 
     public VistaArticulo(){
         scanner = new Scanner(System.in);
@@ -32,7 +31,6 @@ public class VistaArticulo {
                     articulo.getPrecioPublico(), articulo.getPrecioProveedor(), articulo.getStock());
         }
         System.out.println("---------------------");
-
     }
 
     public Articulo obtenerDatosArticulo() {
@@ -74,7 +72,6 @@ public class VistaArticulo {
         int nuevaCantidadExistencia = scanner.nextInt();
         articulo.setStock(nuevaCantidadExistencia);
     }
-
     public void mostrarMensaje(String mensaje) {
         System.out.println(mensaje);
     }

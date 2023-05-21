@@ -18,7 +18,7 @@ public class ControladorArticulo {
     public void agregarArticulo(){
         aux = vista.obtenerDatosArticulo();
         inventario.add(aux);
-        System.out.println("Artículo agregado al carrito: " + aux.getNombreArticulo());
+        System.out.println("Artículo agregado al inventario: " + aux.getNombreArticulo());
     }
 
     public void iniciar() {
@@ -91,6 +91,10 @@ public class ControladorArticulo {
         if (!encontrado) {
             System.out.println("Artículo no encontrado");
         }
+    }
+
+    public List<Articulo> inventario(){
+        return inventario;
     }
 
 }
