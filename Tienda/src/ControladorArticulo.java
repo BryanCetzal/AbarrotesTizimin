@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -6,10 +7,12 @@ public class ControladorArticulo {
     private List<Articulo> inventario;
     private VistaArticulo vista;
     private Articulo aux;
+    Scanner scanner;
 
     public ControladorArticulo() {
         inventario = new ArrayList<>();
         vista = new VistaArticulo();
+        scanner = new Scanner(System.in);
     }
 
     public void agregarArticulo(){
@@ -33,12 +36,17 @@ public class ControladorArticulo {
                     agregarArticulo();
                     break;
                 case 3:
-                    vista.modificarArticulo();
+                    System.out.println("Ingrese el identificador del artículo: ");
+                    int identificador = scanner.nextInt();
+                    modificarArticuloPorId(identificador);
                     break;
                 case 4:
-                    eliminarArticulo();
+                    System.out.println("ELIMINAR ARTICULO DEL INVENTARIO");
+                    System.out.println("Ingrese el identificador del artículo: ");
+                    int id = scanner.nextInt();
+                    eliminarArticulo(id);
                     break;
-                case 5:
+                case 0:
                     vista.mostrarMensaje("¡Saliendo del menu de artículo!");
                     break;
                 default:
@@ -48,35 +56,42 @@ public class ControladorArticulo {
         } while (opcion != 0);
     }
 
-    public void modificarArticulo(int identificador, String nuevoNombre, double nuevoPrecioPublico, double nuevoPrecioProveedor, int nuevaCantidadExistencia) {
-        Articulo articulo = buscarArticuloPorId(identificador);
-        if (articulo != null) {
-            articulo.setNombreArticulo(nuevoNombre);
-            articulo.setPrecioPublico(nuevoPrecioPublico);
-            articulo.setPrecioProveedor(nuevoPrecioProveedor);
-            articulo.setStock(nuevaCantidadExistencia);
-            System.out.println("El artículo se ha modificado correctamente.");
-        } else {
-            System.out.println("No se encontró ningún artículo con el identificador especificado.");
-        }
-    }
+    public void modificarArticuloPorId(int identificador) {
+        boolean encontrado = false;
 
-    public Articulo buscarArticuloPorId(int identificador) {
-        for (Articulo inventario : inventario) {
-            if (inventario.getId() == identificador) {
-                return inventario;
+        for (Articulo articulo : inventario) {
+            if (articulo.getId() == identificador) {
+                encontrado = true;
+                vista.mostarDetalleArticulo(articulo);  // Mostrar detalles del artículo antes de la modificación
+                vista.modificarArticulo(articulo);  // Solicitar los nuevos datos al usuario para modificar el artículo
+                vista.mostrarMensaje("Artículo modificado exitosamente");
+                break;
             }
         }
-        return null; // Si no se encuentra el artículo
+
+        if (!encontrado) {
+            System.out.println("Artículo no encontrado");
+        }
     }
 
+    public void eliminarArticulo(int identificador) {
+        boolean encontrado = false;
 
+        Iterator<Articulo> iterador = inventario.iterator();
+        while (iterador.hasNext()) {
+            Articulo articulo = iterador.next();
+            if (articulo.getId() == identificador) {
+                iterador.remove();  // Eliminar el artículo del inventario
+                encontrado = true;
+                System.out.println("Artículo eliminado: " + articulo.getNombreArticulo());
+                break;
+            }
+        }
 
-    private void eliminarArticulo(){
-
+        if (!encontrado) {
+            System.out.println("Artículo no encontrado");
+        }
     }
-
-
 
 }
 
