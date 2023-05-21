@@ -1,4 +1,3 @@
-import javax.swing.plaf.PanelUI;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -18,7 +17,7 @@ public class ControladorCliente {
     }
 
     public void agregarCliente(){
-        cliente = vista.obtenerDatosArticulo();
+        cliente = vista.obtenerDatosCliente();
         clientes.add(cliente);
         System.out.printf("Se ha agregado al cliente:" + cliente.getNombreCliente() + " "+ cliente.getApellidoPaterno());
         System.out.println();
@@ -96,5 +95,17 @@ public class ControladorCliente {
         }
     }
 
+    public Cliente compradorDatos(int idCliente) {
+        for (Cliente cliente : clientes) {
+            if (cliente.getIdcliente() == idCliente) {
+                vista.mostarDetalleCliente(cliente);
+                vista.mostrarMensaje("Puede continuar con su compra...");
+                return cliente;
+            }
+        }
+
+        System.out.println("Cliente no encontrado");
+        return null;
+    }
 
 }

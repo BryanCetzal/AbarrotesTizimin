@@ -40,24 +40,33 @@ public class VistaCliente {
     }
 
 
-    public Cliente obtenerDatosArticulo() {
+    public Cliente obtenerDatosCliente() {
         scanner.nextLine(); // Limpiar el buffer
-        System.out.print("Ingresa el identificador del Cliente: ");
-        int id = scanner.nextInt();
-        scanner.nextLine(); // Consumir el carácter de nueva línea pendiente
+        int id = 0;
+        try {
+            System.out.print("Ingresa el identificador del Cliente: ");
+            id = Integer.parseInt(scanner.nextLine());
+        } catch (NumberFormatException e) {
+            System.out.println("Error: el formato del identificador es inválido. Intente nuevamente.");
+            return null;
+        }
+
         System.out.print("Ingresa el nombre del Cliente: ");
         String nombre = scanner.nextLine();
+
         System.out.print("Ingresa el apellido del Cliente: ");
         String apellido = scanner.nextLine();
+
         Direccion dir = direccion.solictarDireccion();
         System.out.println();
 
         return new Cliente(id, nombre, apellido, dir);
     }
 
+
     public void mostarDetalleCliente(Cliente cliente){
-        System.out.println("ID: " + cliente.getIdcliente() + " - Nombre: " + cliente.getNombreCliente() +
-                " - Apellido: " + cliente.getApellidoPaterno() + " - Dirección: " + cliente.getDireccion() );
+        System.out.println("ID: " + cliente.getIdcliente() + " Nombre: " + cliente.getNombreCliente() +
+                " Apellido: " + cliente.getApellidoPaterno() + " Dirección: " + cliente.getDireccion() );
     }
 
     public void modificarCliente(Cliente cliente) {

@@ -131,11 +131,11 @@ public class Direccion {
 
     public String toString() {
         return "Calle: " + calle +
-                "Número: " + numero +
-                "Colonia: " + colonia +
-                "Código Postal: " + codigoPostal +
-                "Ciudad: " + ciudad +
-                "Estado: " + estado +
-                "Teléfono: " + telefono;
+                " Número: " + numero +
+                " Colonia: " + colonia +
+                " Código Postal: " + codigoPostal +
+                " Ciudad: " + ciudad +
+                " Estado: " + estado +
+                " Teléfono: " + telefono;
     }
 }

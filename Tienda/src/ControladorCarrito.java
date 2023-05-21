@@ -53,15 +53,20 @@ public class ControladorCarrito {
         }while(opcion!=5);
     }
 
-    public void agregarArticuloCarrito(int ident, int cantidad, List<Articulo> inventario){
+    public void agregarArticuloCarrito(int ident, int cantidad, List<Articulo> inventario) {
         boolean encontrado = false;
 
         for (Articulo articulo : inventario) {
             if (articulo.getId() == ident) {
                 encontrado = true;
+                int cantidadDisponible = articulo.getStock();
+                if (cantidad > cantidadDisponible) {
+                    cantidad = cantidadDisponible; // Establecer la cantidad máxima como la disponible en el inventario
+                    vista.mostrarMensaje("La cantidad máxima que puedes agregar es " + cantidadDisponible);
+                }
                 producto = new Carrito(articulo.getId(), articulo.getNombreArticulo(), articulo.getPrecioPublico(), cantidad);
                 carrito.add(producto);
-                vista.mostrarMensaje("Artículo añadido a carrito exitosamente");
+                vista.mostrarMensaje("Artículo añadido al carrito exitosamente");
                 break;
             }
         }
@@ -70,6 +75,7 @@ public class ControladorCarrito {
             System.out.println("Artículo no encontrado");
         }
     }
+
 
     public void modificarArticuloCarrito(int id){
         boolean encontrado = false;
@@ -106,4 +112,6 @@ public class ControladorCarrito {
             System.out.println("Artículo no encontrado");
         }
     }
+
+    public List<Carrito> comprarCarrito(){return carrito;}
 }

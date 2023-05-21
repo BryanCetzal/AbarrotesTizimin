@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -36,18 +37,51 @@ public class VistaArticulo {
     public Articulo obtenerDatosArticulo() {
         scanner.nextLine(); // Limpiar el buffer
         System.out.print("Ingresa el identificador del artículo: ");
-        int id = scanner.nextInt();
+        int id = 0;
+        try {
+            id = scanner.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("Error: el identificador debe ser un número entero. Intente nuevamente.");
+            scanner.nextLine(); // Consumir el carácter de nueva línea pendiente
+            return null;
+        }
+
         scanner.nextLine(); // Consumir el carácter de nueva línea pendiente
         System.out.print("Ingresa el nombre del artículo: ");
         String nombre = scanner.nextLine();
+
         System.out.print("Ingresa el precio del artículo: ");
-        double precio = scanner.nextDouble();
+        double precio = 0.0;
+        try {
+            precio = scanner.nextDouble();
+        } catch (InputMismatchException e) {
+            System.out.println("Error: el precio debe ser un número decimal. Intente nuevamente.");
+            scanner.nextLine(); // Consumir el carácter de nueva línea pendiente
+            return null;
+        }
+
         System.out.print("Ingresa el precio del artículo (proveedor): ");
-        double precioProveedor = scanner.nextDouble();
+        double precioProveedor = 0.0;
+        try {
+            precioProveedor = scanner.nextDouble();
+        } catch (InputMismatchException e) {
+            System.out.println("Error: el precio del proveedor debe ser un número decimal. Intente nuevamente.");
+            scanner.nextLine(); // Consumir el carácter de nueva línea pendiente
+            return null;
+        }
+
         System.out.print("Ingresa la cantidad en stock: ");
-        int stock = scanner.nextInt();
+        int stock = 0;
+        try {
+            stock = scanner.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("Error: la cantidad en stock debe ser un número entero. Intente nuevamente.");
+            return null;
+        }
+
         return new Articulo(id, nombre, precio, precioProveedor, stock);
     }
+
 
     public void mostarDetalleArticulo(Articulo articulo){
         System.out.println("ID: " + articulo.getId() + " - Nombre: " + articulo.getNombreArticulo() + " - Precio publico: "
