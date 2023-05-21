@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -89,6 +90,20 @@ public class ControladorCarrito {
     }
 
     public void eliminarArticuloCarrito(int id){
+        boolean encontrado = false;
 
+        Iterator<Carrito> iterador = carrito.iterator();
+        while (iterador.hasNext()) {
+            Carrito carrito1 = iterador.next();
+            if (carrito1.getId() == id) {
+                iterador.remove();  // Eliminar el artículo del inventario
+                encontrado = true;
+                System.out.println("Artículo eliminado del carrito: " + carrito1.getNombreArticulo());
+                break;
+            }
+        }
+        if (!encontrado) {
+            System.out.println("Artículo no encontrado");
+        }
     }
 }
