@@ -4,15 +4,23 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ControladorArticulo implements Observador{
+    private static ControladorArticulo instancia;
     private List<Articulo> inventario;
     private VistaArticulo vista;
     private Articulo aux;
     Scanner scanner;
 
-    public ControladorArticulo() {
+    private ControladorArticulo() {
         inventario = new ArrayList<>();
         vista = new VistaArticulo();
         scanner = new Scanner(System.in);
+    }
+
+    public static ControladorArticulo getInstance(){
+        if (instancia == null) {
+            instancia = new ControladorArticulo();
+        }
+        return instancia;
     }
 
     public void agregarArticulo(){

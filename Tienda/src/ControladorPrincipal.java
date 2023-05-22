@@ -10,7 +10,7 @@ public class ControladorPrincipal {
 
     public ControladorPrincipal(){
         vistaPrincipal = new VistaPrincipal();
-        controladorArticulo = new ControladorArticulo();
+        controladorArticulo = ControladorArticulo.getInstance();
         controladorCliente = new ControladorCliente();
         controladorCarrito = new ControladorCarrito();
         scanner = new Scanner(System.in);

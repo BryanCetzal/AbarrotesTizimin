@@ -43,8 +43,6 @@ public class Carrito {
         this.precioU = precioU;
     }
 
-    public void reducirStock(int cantidad) {
-    }
 }
 
 
