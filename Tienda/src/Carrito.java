@@ -1,4 +1,4 @@
-public class Carrito {
+public class Carrito implements Observer {
     private int id;
     private String nombreArticulo;
     private double precioU;
@@ -41,6 +41,14 @@ public class Carrito {
 
     public void setPrecioU(double precioU) {
         this.precioU = precioU;
+    }
+
+    public void reducirStock(int cantidad) {
+    }
+
+    @Override
+    public void actualizar() {
+        System.out.println("Carrito de compras actualizado");
     }
 }
 

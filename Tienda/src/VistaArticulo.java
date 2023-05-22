@@ -1,12 +1,15 @@
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
 public class VistaArticulo {
     private Scanner scanner;
+    private List<Observer> observadores;
 
     public VistaArticulo(){
         scanner = new Scanner(System.in);
+        observadores = new ArrayList<>();
     }
 
     public void mostrarMenu() {

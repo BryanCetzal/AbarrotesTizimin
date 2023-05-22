@@ -3,7 +3,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
-public class ControladorCarrito {
+public class ControladorCarrito implements Observer{
     private List<Carrito> carrito;
     private VistaCarrito vista;
     private Carrito producto;
@@ -64,9 +64,10 @@ public class ControladorCarrito {
                     cantidad = cantidadDisponible; // Establecer la cantidad máxima como la disponible en el inventario
                     vista.mostrarMensaje("La cantidad máxima que puedes agregar es " + cantidadDisponible);
                 }
-                producto = new Carrito(articulo.getId(), articulo.getNombreArticulo(), articulo.getPrecioPublico(), cantidad);
-                carrito.add(producto);
-                vista.mostrarMensaje("Artículo añadido al carrito exitosamente");
+                Carrito carrito = new Carrito(articulo.getId(), articulo.getNombreArticulo(), articulo.getPrecioPublico(), cantidad);
+                articulo.agregarObservador(carrito); // Registrar el Carrito como observador del Articulo
+                carrito.reducirStock(cantidad); // Reducir el stock del artículo
+
                 break;
             }
         }
@@ -111,6 +112,11 @@ public class ControladorCarrito {
         if (!encontrado) {
             System.out.println("Artículo no encontrado");
         }
+    }
+
+    @Override
+    public void actualizar() {
+        vista.mostrarMensaje("Artículo añadido al carrito exitosamente");
     }
 
     public List<Carrito> comprarCarrito(){return carrito;}

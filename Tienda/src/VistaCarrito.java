@@ -1,7 +1,8 @@
+import javax.management.openmbean.OpenMBeanAttributeInfo;
 import java.util.List;
 import java.util.Scanner;
 
-public class VistaCarrito {
+public class VistaCarrito implements Observer {
     private Scanner scanner;
 
     public VistaCarrito(){
@@ -64,5 +65,10 @@ public class VistaCarrito {
 
     public void mostrarMensaje(String mensaje) {
         System.out.println(mensaje);
+    }
+
+    @Override
+    public void actualizar() {
+        mostrarMensaje("Artículo añadido al carrito exitosamente");
     }
 }
