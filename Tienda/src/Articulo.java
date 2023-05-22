@@ -7,7 +7,6 @@ public class Articulo {
     private double precioPublico;
     private double precioProveedor;
     private int stock;
-    private List<Observer> observadores;
 
     public Articulo(int id, String nombreArticulo, double precioPublico, double precioProveedor, int stock) {
         this.id = id;
@@ -15,7 +14,6 @@ public class Articulo {
         this.precioPublico = precioPublico;
         this.precioProveedor = precioProveedor;
         this.stock = stock;
-        this.observadores = new ArrayList<>();
     }
 
     public int getId() {
@@ -56,21 +54,6 @@ public class Articulo {
 
     public void setStock(int stock) {
         this.stock = stock;
-    }
-
-    public void agregarObservador(Observer observador) {
-        observadores.add(observador);
-    }
-
-    public void notificarObservadores() {
-        for (Observer observador : observadores) {
-            observador.actualizar();
-        }
-    }
-
-    public void reducirStock(int cantidad) {
-        stock -= cantidad;
-        notificarObservadores();
     }
 }
 

@@ -3,7 +3,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
-public class ControladorArticulo {
+public class ControladorArticulo implements Observador{
     private List<Articulo> inventario;
     private VistaArticulo vista;
     private Articulo aux;
@@ -90,6 +90,24 @@ public class ControladorArticulo {
 
         if (!encontrado) {
             System.out.println("Artículo no encontrado");
+        }
+    }
+
+    @Override
+    public void actualizar(int cantidad, int id) {
+        reducirStock(cantidad, id);
+    }
+    public void reducirStock(int cantidad, int id) {
+        boolean encontrado = false;
+
+        for (Articulo articulo : inventario) {
+            if (articulo.getId() == id) {
+                encontrado = true;
+                int cantidadActual = articulo.getStock();
+                int cantidadNueva = cantidadActual - cantidad;
+                articulo.setStock(cantidadNueva);
+                break;
+            }
         }
     }
 

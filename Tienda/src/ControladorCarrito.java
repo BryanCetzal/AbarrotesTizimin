@@ -3,16 +3,18 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
-public class ControladorCarrito implements Observer{
+public class ControladorCarrito implements SujetoObservable {
     private List<Carrito> carrito;
     private VistaCarrito vista;
     private Carrito producto;
     private Scanner scanner;
+    private ArrayList<Observador> observadores;
 
     public ControladorCarrito(){
         carrito = new ArrayList<>();
         vista = new VistaCarrito();
         scanner = new Scanner(System.in);
+        observadores = new ArrayList<>();
     }
 
     public void inicioCarrito(List<Articulo> inventario){
@@ -64,19 +66,24 @@ public class ControladorCarrito implements Observer{
                     cantidad = cantidadDisponible; // Establecer la cantidad máxima como la disponible en el inventario
                     vista.mostrarMensaje("La cantidad máxima que puedes agregar es " + cantidadDisponible);
                 }
-                Carrito carrito = new Carrito(articulo.getId(), articulo.getNombreArticulo(), articulo.getPrecioPublico(), cantidad);
-                articulo.agregarObservador(carrito); // Registrar el Carrito como observador del Articulo
-                carrito.reducirStock(cantidad); // Reducir el stock del artículo
-
+                producto = new Carrito(articulo.getId(), articulo.getNombreArticulo(), articulo.getPrecioPublico(), cantidad);
+                carrito.add(producto);
+                notificar(cantidad, articulo.getStock());
+                vista.mostrarMensaje("Artículo añadido al carrito exitosamente");
                 break;
             }
         }
-
         if (!encontrado) {
             System.out.println("Artículo no encontrado");
         }
     }
 
+    @Override
+    public void notificar(int cantidad, int id) {
+        for(Observador o: observadores){
+            o.actualizar(cantidad, id);
+        }
+    }
 
     public void modificarArticuloCarrito(int id){
         boolean encontrado = false;
@@ -114,10 +121,7 @@ public class ControladorCarrito implements Observer{
         }
     }
 
-    @Override
-    public void actualizar() {
-        vista.mostrarMensaje("Artículo añadido al carrito exitosamente");
-    }
+    public void enlazar0bservador(Observador o) {observadores.add(o);};
 
     public List<Carrito> comprarCarrito(){return carrito;}
 }

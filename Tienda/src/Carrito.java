@@ -1,4 +1,4 @@
-public class Carrito implements Observer {
+public class Carrito {
     private int id;
     private String nombreArticulo;
     private double precioU;
@@ -44,11 +44,6 @@ public class Carrito implements Observer {
     }
 
     public void reducirStock(int cantidad) {
-    }
-
-    @Override
-    public void actualizar() {
-        System.out.println("Carrito de compras actualizado");
     }
 }
 

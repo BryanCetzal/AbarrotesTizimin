@@ -9,7 +9,7 @@ public class TicketBase implements Ticket {
     @Override
     public void imprimir() {
         double sumador = 0;
-        System.out.println("----- ARTÍCULOS -----");
+        System.out.println("----- ARTÍCULOS COMPRADOS -----");
         System.out.format("%-5s %-20s %-15s %-10s %-15s%n", "ID", "Nombre", "Precio Unidad", "Cantidad", "Total");
         for (Carrito carrito : carrito) {
             double precioTotal = (carrito.getPrecioU() * carrito.getCantidad());
