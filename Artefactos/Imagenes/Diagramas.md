@@ -1,13 +1,13 @@
 # Diagramas usados en el proyecto
 - Diagrama de casos de uso  
-![](Artefactos/CasosDeUso.png)
+![](../CasosDeUso.png)
 - Diagrama de clases  
-![](Artefactos/DiagramaDeClases.png)
+![](../DiagramaDeClases.png)
 - Diagrama de secuencia  
-![](Artefactos/DiagramaDeSecuencia.png)
+![](../DiagramaDeSecuencia.png)
 - Diagrama de estado  
-![](Artefactos/DiagramaDeEstados.png)
+![](../DiagramaDeEstados.png)
 - Diagrama de colaboración   
-![](Artefactos/DiagramaDeColaboracion.png)
+![](../DiagramaDeColaboracion.png)
 - Diagrama de actividad  
-![](Artefactos/DiagramaDeActividad.png)
+![](../DiagramaDeActividad.png)
