@@ -13,7 +13,7 @@ El proyecto se ha desarrollado utilizando el lenguaje de programación Java, uti
 ## [Diagramas](Artefactos/Imagenes/Diagramas.md)  
 Los diagrams editables los puedes encontrar [aquí](Artefactos/Diagramas)
 
-## [Vistas del programa](Artefactos/Vistas)    
+## [Vistas del programa](Artefactos/Imagenes/Vistas.md)    
 
 ## Integrantes:  
 - [Bryan Emmanuel Cetzal Ceme](https://github.com/BryanCetzal)
