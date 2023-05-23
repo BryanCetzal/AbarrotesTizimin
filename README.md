@@ -13,7 +13,7 @@ El proyecto se ha desarrollado utilizando el lenguaje de programación Java, uti
 ## [Diagramas](Artefactos/Imagenes/Diagramas.md)  
 ## [Vistas del programa](Artefactos/Imagenes/Vistas.md)   
 ## Documentos
-- Los diagrams editables los puedes encontrar [aquí](Artefactos/Diagramas)
+- Los diagramas editables los puedes encontrar [aquí](Artefactos/Diagramas)
 - Documento word [aquí](https://alumnosuady-my.sharepoint.com/:w:/g/personal/a21216883_alumnos_uady_mx/EbGDE93LbfdFlzdCGc0rbAEBpiRx4MLMrtaJB4D3t4ZBaA?e=OusT53)
 
 ## Integrantes:  
