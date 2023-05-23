@@ -11,9 +11,10 @@ El proyecto se ha desarrollado utilizando el lenguaje de programación Java, uti
   
 ## [Requerimientos Funcionales](Requerimientos.md)  
 ## [Diagramas](Artefactos/Imagenes/Diagramas.md)  
-Los diagrams editables los puedes encontrar [aquí](Artefactos/Diagramas)
-
-## [Vistas del programa](Artefactos/Imagenes/Vistas.md)    
+## [Vistas del programa](Artefactos/Imagenes/Vistas.md)   
+## Documentos
+- Los diagrams editables los puedes encontrar [aquí](Artefactos/Diagramas)
+- Documento word [aquí](https://alumnosuady-my.sharepoint.com/:w:/g/personal/a21216883_alumnos_uady_mx/EbGDE93LbfdFlzdCGc0rbAEBpiRx4MLMrtaJB4D3t4ZBaA?e=OusT53)
 
 ## Integrantes:  
 - [Bryan Emmanuel Cetzal Ceme](https://github.com/BryanCetzal)
