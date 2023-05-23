@@ -10,7 +10,7 @@ El proyecto se ha desarrollado utilizando el lenguaje de programación Java, uti
  
   
 ## [Requerimientos Funcionales](Requerimientos.md)  
-## [Diagramas](Artefactos/Imagenes)  
+## [Diagramas](Artefactos/Imagenes/Diagramas.md)  
 Los diagrams editables los puedes encontrar [aquí](Artefactos/Diagramas)
 
 ## [Vistas del programa](Artefactos/Vistas)    
