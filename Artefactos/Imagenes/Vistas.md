@@ -6,6 +6,6 @@
 - Vista Articulos (Inventario).     
 ![](../VistaArticulos.png)
 - Vista Carrito.  
-![](../VistaCarrito)
+![](../VistaCarrito.png)
 - Vista Pago (Ticket).  
 ![](../Ticket.png)
