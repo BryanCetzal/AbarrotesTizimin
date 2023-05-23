@@ -35,4 +35,4 @@ ejemplo: javafx, swing):
 - [Bryan Emmanuel Cetzal Ceme](https://github.com/BryanCetzal)
 - [Bennen Alexandre Tun Ek](https://github.com/Benn7n)
 - [Bernardo Reyes Chimal Pool](https://github.com/A7xBrOwNiE)
-- [Yajani Anahì Peraza Alcocer](https://github.com/)
+- [Yajani Anahì Peraza Alcocer](https://github.com/YajaniPeraza)
