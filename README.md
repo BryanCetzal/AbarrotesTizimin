@@ -27,9 +27,12 @@ ejemplo: javafx, swing):
 ![]()
 - Diagrama de secuencia
 ![]()
+- Diagrama de estado
+- Diagrama de colaboración 
+- Diagrama de actividad
 
 ## Integrantes:  
 - [Bryan Emmanuel Cetzal Ceme](https://github.com/BryanCetzal)
 - [Bennen Alexandre Tun Ek](https://github.com/Benn7n)
-- [Bernardo Reyes Chimal Pool](https://github.com/)
+- [Bernardo Reyes Chimal Pool](https://github.com/A7xBrOwNiE)
 - [Yajani Anahì Peraza Alcocer](https://github.com/)
