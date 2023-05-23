@@ -11,15 +11,25 @@ El proyecto se ha desarrollado utilizando el lenguaje de programación Java, uti
   
 ## [Requerimientos Funcionales](Requerimientos.md)  
 ## Diagramas  
-- Diagrama de casos de uso
-![]()
-- Diagrama de clases
-![]()
-- Diagrama de secuencia
-![]()
-- Diagrama de estado
-- Diagrama de colaboración 
-- Diagrama de actividad
+- Diagrama de casos de uso  
+![](Artefactos/CasosDeUso.png)
+- Diagrama de clases  
+![](Artefactos/DiagramaDeClases.png)
+- Diagrama de secuencia  
+![](Artefactos/DiagramaDeSecuencia.png)
+- Diagrama de estado  
+![](Artefactos/DiagramaDeEstados.png)
+- Diagrama de colaboración   
+![](Artefactos/DiagramaDeColaboracion.png)
+- Diagrama de actividad  
+![](Artefactos/DiagramaDeActividad.png)
+
+## Vistas del programa  
+- Vista Cliente.  
+- Vista Articulos (Inventario).  
+- Vista Carrito.  
+- Vista Pago (Ticket).  
+
 
 ## Integrantes:  
 - [Bryan Emmanuel Cetzal Ceme](https://github.com/BryanCetzal)
